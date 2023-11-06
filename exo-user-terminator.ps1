@@ -8,12 +8,12 @@ $requiredModules | ForEach-Object {
 # Import required modules
 Import-Module ExchangeOnlineManagement, AzureAD <#, Pax8-API#>
 
-#Prompt for credentials 
-$credential = Get-Credential
+<#Prompt for credentials (deprecated to account for mfa)
+$credential = Get-Credential#>
 
 #Connect modules 
-Connect-ExchangeOnline -Credential $credential
-Connect-AzureAD -Credential $credential
+Connect-ExchangeOnline #-Credential $credential
+Connect-AzureAD #-Credential $credential
 
 # Prompt for the UPN of the user to be terminated
 $userUPN = Read-Host -Prompt "Enter the email of the user to be terminated"

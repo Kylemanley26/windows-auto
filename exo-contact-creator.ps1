@@ -1,10 +1,10 @@
 Import-Module ExchangeOnlineManagement
 
-# Prompt for Exchange environment credentials
-$credential = Get-Credential
+# Prompt for Exchange environment credentials (deprecated for mfa)
+#$credential = Get-Credential
 
 # Connect to Exchange Online using the provided credentials
-Connect-ExchangeOnline -Credential $credential
+Connect-ExchangeOnline #-Credential $credential
 
 # Create the GUI form
 Add-Type -AssemblyName System.Windows.Forms

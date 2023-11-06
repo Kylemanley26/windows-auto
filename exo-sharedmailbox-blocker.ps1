@@ -2,12 +2,12 @@
 # Import the required module
 Import-Module ExchangeOnlineManagement, AzureAD
 
-# Store your credentials
-$UserCredential = Get-Credential
+<#Prompt for credentials (deprecated to account for mfa)
+$credential = Get-Credential#>
 
-# Connect to Exchange Online
-Connect-ExchangeOnline -Credential $UserCredential -ShowBanner:$false
-Connect-AzureAD -Credential $UserCredential
+#Connect modules 
+Connect-ExchangeOnline #-Credential $credential
+Connect-AzureAD #-Credential $credential
 
 # Get all shared mailboxes
 $SharedMailboxes = Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize Unlimited

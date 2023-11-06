@@ -1,8 +1,8 @@
 import-module ExchangeOnlineManagement
 
-$UserCredential = Get-Credential
+#$UserCredential = Get-Credential (deprecated for mfa)
 
-Connect-ExchangeOnline -Credential $UserCredential
+Connect-ExchangeOnline #-Credential $UserCredential
 
 $contactEmail = Read-Host -Prompt 'Input the contact email address'
 $groups = Get-DistributionGroup
