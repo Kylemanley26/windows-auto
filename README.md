@@ -1,3 +1,5 @@
 # collection of scripts and automation tools
--nothing major just powershell scripts for simple tasks
+-a variety of automation tasks for the daily system administrator/helpdesk
+-exo = exchange online
+-win = windows automation scripts
 
